@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_navigation"
+    app:startDestination="@id/fragment_characters">
+
+    <fragment
+        android:id="@+id/fragment_characters"
+        android:name="kg.tutorialapp.taskfortimelysoft.Fragment_characters"
+        android:label="Characters"
+        tools:layout="@layout/fragment_layout_characters">
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_locations"
+        android:name="kg.tutorialapp.taskfortimelysoft.Fragment_locations"
+        android:label="Locations"
+        tools:layout="@layout/fragment_layout_locations"/>
+    <fragment
+        android:id="@+id/fragment_episodes"
+        android:name="kg.tutorialapp.taskfortimelysoft.Fragment_episodes"
+        android:label="Episodes"
+        tools:layout="@layout/fragment_layout_episodes"/>
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="kg.tutorialapp.taskfortimelysoft.Fragment_search"
+        android:label="Search"
+        tools:layout="@layout/fragment_layout_search"/>
+
+</navigation>

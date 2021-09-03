@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Task for Timelysoft</string>
+    <string name="characters">Characters</string>
+    <string name="location">Locations</string>
+    <string name="episodes">Episodes</string>
+    <string name="search">Search</string>
+</resources>

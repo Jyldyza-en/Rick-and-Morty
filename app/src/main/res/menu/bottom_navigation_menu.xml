@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment_characters"
+        android:enabled="true"
+        android:icon="@drawable/icon_character"
+        android:title="@string/characters"/>
+    <item
+        android:id="@+id/fragment_locations"
+        android:enabled="true"
+        android:icon="@drawable/icon_location"
+        android:title="@string/location"/>
+    <item
+        android:id="@+id/fragment_episodes"
+        android:enabled="true"
+        android:icon="@drawable/icon_episode"
+        android:title="@string/episodes"/>
+    <item
+        android:id="@+id/fragment_search"
+        android:enabled="true"
+        android:icon="@drawable/icon_search"
+        android:title="@string/search"/>
+
+</menu>
