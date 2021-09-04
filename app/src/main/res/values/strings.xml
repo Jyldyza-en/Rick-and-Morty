@@ -4,4 +4,10 @@
     <string name="location">Locations</string>
     <string name="episodes">Episodes</string>
     <string name="search">Search</string>
+    <string name="species">Species :</string>
+    <string name="status">Status :</string>
+    <string name="gender">Gender :</string>
+    <string name="image_description">Avatar for character</string>
+    <string name="type">Type :</string>
+    <string name="created">Created :</string>
 </resources>

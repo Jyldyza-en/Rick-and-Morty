@@ -7,23 +7,33 @@
 
     <fragment
         android:id="@+id/fragment_characters"
-        android:name="kg.tutorialapp.taskfortimelysoft.Fragment_characters"
+        android:name="kg.tutorialapp.taskfortimelysoft.ui.characters.FragmentCharacters"
         android:label="Characters"
         tools:layout="@layout/fragment_layout_characters">
+        <action
+            android:id="@+id/action_charactersFragment_to_characterDetailFragment"
+            app:destination="@+id/characterDetailFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="kg.tutorialapp.taskfortimelysoft.ui.characterdetail.CharacterDetailFragment"
+        android:label="Character Detail"
+        tools:layout="@layout/fragment_character_detail" />
+
     <fragment
         android:id="@+id/fragment_locations"
-        android:name="kg.tutorialapp.taskfortimelysoft.Fragment_locations"
+        android:name="kg.tutorialapp.taskfortimelysoft.ui.Fragment_locations"
         android:label="Locations"
         tools:layout="@layout/fragment_layout_locations"/>
     <fragment
         android:id="@+id/fragment_episodes"
-        android:name="kg.tutorialapp.taskfortimelysoft.Fragment_episodes"
+        android:name="kg.tutorialapp.taskfortimelysoft.ui.Fragment_episodes"
         android:label="Episodes"
         tools:layout="@layout/fragment_layout_episodes"/>
     <fragment
         android:id="@+id/fragment_search"
-        android:name="kg.tutorialapp.taskfortimelysoft.Fragment_search"
+        android:name="kg.tutorialapp.taskfortimelysoft.ui.Fragment_search"
         android:label="Search"
         tools:layout="@layout/fragment_layout_search"/>
 
