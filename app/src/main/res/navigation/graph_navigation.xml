@@ -23,12 +23,23 @@
 
     <fragment
         android:id="@+id/fragment_locations"
-        android:name="kg.tutorialapp.taskfortimelysoft.ui.Fragment_locations"
+        android:name="kg.tutorialapp.taskfortimelysoft.ui.locations.Fragment_locations"
         android:label="Locations"
-        tools:layout="@layout/fragment_layout_locations"/>
+        tools:layout="@layout/fragment_layout_locations">
+        <action
+            android:id="@+id/action_locationsFragment_to_locationDetailFragment"
+            app:destination="@+id/locationDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/locationDetailFragment"
+        android:name="kg.tutorialapp.taskfortimelysoft.ui.locationsdetail.LocationDetailFragment"
+        android:label="Location Detail"
+        tools:layout="@layout/fragment_location_detail" />
+
     <fragment
         android:id="@+id/fragment_episodes"
-        android:name="kg.tutorialapp.taskfortimelysoft.ui.Fragment_episodes"
+        android:name="kg.tutorialapp.taskfortimelysoft.ui.episodes.Fragment_episodes"
         android:label="Episodes"
         tools:layout="@layout/fragment_layout_episodes"/>
     <fragment

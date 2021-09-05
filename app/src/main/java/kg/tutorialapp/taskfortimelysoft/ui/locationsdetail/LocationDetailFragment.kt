@@ -1,4 +1,4 @@
-package kg.tutorialapp.taskfortimelysoft.ui.characterdetail
+package kg.tutorialapp.taskfortimelysoft.ui.locationsdetail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,20 +12,22 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import dagger.hilt.android.AndroidEntryPoint
 import kg.tutorialapp.taskfortimelysoft.data.model.Character
+import kg.tutorialapp.taskfortimelysoft.data.model.Location
 import kg.tutorialapp.taskfortimelysoft.databinding.FragmentCharacterDetailBinding
+import kg.tutorialapp.taskfortimelysoft.databinding.FragmentLocationDetailBinding
 import kg.tutorialapp.taskfortimelysoft.util.Resource
 import kg.tutorialapp.taskfortimelysoft.util.autoCleared
 @AndroidEntryPoint
-class CharacterDetailFragment : Fragment() {
+class LocationDetailFragment : Fragment() {
 
-    private var binding: FragmentCharacterDetailBinding by autoCleared()
-    private val viewModel: CharacterDetailViewModel by viewModels()
+    private var binding: FragmentLocationDetailBinding by autoCleared()
+    private val viewModel: LocationDetailViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCharacterDetailBinding.inflate(inflater, container, false)
+        binding = FragmentLocationDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -36,12 +38,12 @@ class CharacterDetailFragment : Fragment() {
     }
 
     private fun setupObservers() {
-        viewModel.character.observe(viewLifecycleOwner, Observer {
+        viewModel.location.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Resource.Status.SUCCESS -> {
-                    bindCharacter(it.data!!)
+                    bindLocation(it.data!!)
                     binding.progressBar.visibility = View.GONE
-                    binding.characterCl.visibility = View.VISIBLE
+                    binding.locationCl.visibility = View.VISIBLE
                 }
 
                 Resource.Status.ERROR ->
@@ -49,22 +51,16 @@ class CharacterDetailFragment : Fragment() {
 
                 Resource.Status.LOADING -> {
                     binding.progressBar.visibility = View.VISIBLE
-                    binding.characterCl.visibility = View.GONE
+                    binding.locationCl.visibility = View.GONE
                 }
             }
         })
     }
 
-    private fun bindCharacter(character: Character) {
-        binding.name.text = character.name
-        binding.species.text = character.species
-        binding.status.text = character.status
-        binding.gender.text = character.gender
-        binding.created.text = character.created
-        binding.type.text = character.type
-        Glide.with(binding.root)
-            .load(character.image)
-            .transform(CircleCrop())
-            .into(binding.image)
+    private fun bindLocation(location: Location) {
+        binding.name.text = location.name
+        binding.typeLocation.text = location.type
+        binding.dimension.text = location.dimension
+        binding.createdLocation.text = location.created
     }
 }

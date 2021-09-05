@@ -1,4 +1,4 @@
-package kg.tutorialapp.taskfortimelysoft.ui
+package kg.tutorialapp.taskfortimelysoft.ui.episodes
 
 import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
