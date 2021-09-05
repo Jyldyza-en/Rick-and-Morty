@@ -41,7 +41,18 @@
         android:id="@+id/fragment_episodes"
         android:name="kg.tutorialapp.taskfortimelysoft.ui.episodes.Fragment_episodes"
         android:label="Episodes"
-        tools:layout="@layout/fragment_layout_episodes"/>
+        tools:layout="@layout/fragment_layout_episodes">
+        <action
+            android:id="@+id/action_episodesFragment_to_episodeDetailFragment"
+            app:destination="@+id/episodeDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/episodeDetailFragment"
+        android:name="kg.tutorialapp.taskfortimelysoft.ui.episodesdetail.EpisodeDetailFragment"
+        android:label="Episode Detail"
+        tools:layout="@layout/fragment_episode_detail" />
+
     <fragment
         android:id="@+id/fragment_search"
         android:name="kg.tutorialapp.taskfortimelysoft.ui.Fragment_search"

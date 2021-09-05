@@ -8,6 +8,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kg.tutorialapp.taskfortimelysoft.data.local.AppDatabase
 import kg.tutorialapp.taskfortimelysoft.data.local.CharacterDao
+import kg.tutorialapp.taskfortimelysoft.data.local.EpisodeDao
 import kg.tutorialapp.taskfortimelysoft.data.local.LocationDao
 import javax.inject.Singleton
 
@@ -31,6 +32,12 @@ object DatabaseModule {
     @Provides
     fun provideLocationDao(db: AppDatabase): LocationDao {
         return db.locationDao()
+    }
+
+    @Singleton
+    @Provides
+    fun provideEpisodeDao(db: AppDatabase): EpisodeDao {
+        return db.episodeDao()
     }
 
 }

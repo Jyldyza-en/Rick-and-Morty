@@ -10,6 +10,7 @@ import dagger.hilt.components.SingletonComponent
 import kg.tutorialapp.taskfortimelysoft.data.local.CharacterDao
 import kg.tutorialapp.taskfortimelysoft.data.remote.CharacterRemoteDataSource
 import kg.tutorialapp.taskfortimelysoft.data.remote.CharacterService
+import kg.tutorialapp.taskfortimelysoft.data.remote.EpisodeService
 import kg.tutorialapp.taskfortimelysoft.data.remote.LocationService
 import kg.tutorialapp.taskfortimelysoft.data.repository.CharacterRepository
 import retrofit2.Retrofit
@@ -55,9 +56,9 @@ object NetworkModule {
         retrofit.create(LocationService::class.java)
 
 
-    /*@Singleton
+    @Singleton
     @Provides
     fun provideEpisodeApiService(retrofit: Retrofit): EpisodeService =
         retrofit.create(EpisodeService::class.java)
-    */
+
 }

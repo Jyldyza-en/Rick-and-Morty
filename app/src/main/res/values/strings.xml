@@ -11,4 +11,6 @@
     <string name="type">Type :</string>
     <string name="created">Created :</string>
     <string name="dimension">Dimension :</string>
+    <string name="air_date">Air_date :</string>
+    <string name="episode">Code :</string>
 </resources>
